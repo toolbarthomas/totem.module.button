@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/// Sass map to generate button models.
+
+$button-models: (
+    'default' : (
+        'height': 48px,
+        'gutter': 24px,
+        'inner-height': 44px,
+        'line-height': 1.2em,
+        'glyph-wrapper-width': 36px
+    )
+);

@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/// Mixin to generate the defined model for the button module.
+///
+/// @param { String } $type
+///     Specified button to style.
+///
+/// @return { Value }
+
+@mixin button-model(
+    $model: false
+) {
+    @if $model {
+        @if button-model($model, 'height') != false {
+            height: button-model($model, 'height');
+
+            &.button--square {
+                width: button-model($model, 'height');
+                padding: 0;
+            }
+        }
+
+        @if button-model($model, 'gutter') != false {
+            padding-left: button-model($model, 'gutter');
+            padding-right: button-model($model, 'gutter');
+        }
+
+        @if button-model($model, 'inner-height') != false {
+            line-height: button-model($model, 'inner-height');
+
+            .button__glyph {
+                max-width: button-model($model, 'inner-height');
+                max-height: button-model($model, 'inner-height');
+            }
+
+            &.button--rounded {
+                border-radius: button-model($model, 'inner-height') / 2;
+            }
+
+            &.button--fixed-glyph .button__glyph-wrapper {
+                width: button-model($model, 'inner-height');
+                height: button-model($model, 'inner-height');
+                line-height: button-model($model, 'inner-height');
+            }
+        }
+
+        @if button-model($model, 'line-height') != false {
+            .button__inner-wrapper {
+                line-height: button-model($model, 'line-height');
+            }
+        }
+
+        @if button-model($model, 'glyph-wrapper-width') != false {
+            &.button--fixed-glyph {
+                padding-left: button-model($model, 'glyph-wrapper-width');
+                padding-right: button-model($model, 'glyph-wrapper-width');
+            }
+
+            &.button--fixed-glyph .button__glyph-wrapper {
+                width: button-model($model, 'glyph-wrapper-width');
+            }
+        }
+    }
+}

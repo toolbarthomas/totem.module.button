@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/// Alias shorthand to return a specific button element/selector.
+///
+/// @param { String } $type
+///     Define wich element to return.
+///
+/// @return { Value || List }
+
+@function button-element(
+    $type: false
+)
+{
+    @if $type != false {
+        @return map-get($button-elements, $type);
+    }
+}

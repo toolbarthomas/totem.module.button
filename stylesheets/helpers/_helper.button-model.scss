@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/// Alias shorthand to return a specific button model.
+///
+/// @param { String } $category
+///     Define from wich category the property should return from.
+///
+/// @param { String } $type
+///     The type of property we wan't to return
+///
+/// @return { Value }
+
+@function button-model(
+    $category: false,
+    $property: false
+)
+{
+    @if ($category != false) and ($property != false)
+    {
+        @return get-setting($button-models, $category, $property);
+    }
+}

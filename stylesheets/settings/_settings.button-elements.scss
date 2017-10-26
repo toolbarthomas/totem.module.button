@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/// Sass map to generate the button selectors.
+$button-elements: (
+    'base': (
+        'a',
+        'span',
+        'button'
+    )
+);
+
+$buttons: button-element('base');
