@@ -11,6 +11,14 @@
     $category: false
 ) {
     @if $category {
+        @if button-style($category, 'font-weight') != false {
+            font-weight: button-style($category, 'font-weight');
+        }
+
+        @if button-style($category, 'font-style') != false {
+            font-style: button-style($category, 'font-style');
+        }
+
         @if button-style($category, 'color') != false {
             color: button-style($category, 'color');
         }
