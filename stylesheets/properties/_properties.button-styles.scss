@@ -4,6 +4,8 @@
 
 $button-styles: (
     'default' : (
+        'font-weight': 700,
+        'font-style': normal,
         'color': color('primary', 'contrast'),
         'color--hover': color('support', 'base'),
         'color--active': false,
