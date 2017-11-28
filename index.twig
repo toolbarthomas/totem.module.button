@@ -8,7 +8,11 @@
     You should define your code within `totem.module.button/partials`.
 #}
 
-{% extends "templates/module/module.twig" %}
+{% extends "totem::src/resources/templates/module/module.twig" %}
+
+{% block head %}
+    <link href="stylesheets/totem.module.button.bundle.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
 
 {% block module %}
 
@@ -18,16 +22,6 @@
 
 {% endblock %}
 
-{% block module_stylesheets %}
-    <link href="stylesheets/totem.module.button.bundle.css" rel="stylesheet" type="text/css"/>
-{% endblock %}
-
-{% block module_style %}
-{% endblock %}
-
-{% block module_javascripts %}
+{% block foot %}
     <script src="javascripts/totem.module.button.js"></script>
-{% endblock %}
-
-{% block module_style %}
 {% endblock %}

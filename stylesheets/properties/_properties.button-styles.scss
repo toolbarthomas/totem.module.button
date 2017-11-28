@@ -39,4 +39,4 @@ $button-styles: (
         'border-radius': box-model('border-radius', 'medium'),
         'transition': (all 300ms ease-in-out 0ms)
     )
-);
+) !default;

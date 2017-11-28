@@ -7,6 +7,6 @@ $button-elements: (
         'span',
         'button'
     )
-);
+) !default;
 
-$buttons: button-element('base');
+$buttons: button-element('base') !default;
