@@ -1,6 +1,6 @@
 {
     "name": "totem.module.button",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "description": "Base button styles & snippets for Totem",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,8 @@
     "bugs": {
         "url": "https://github.com/toolbarthomas/totem.module.button/issues"
     },
-    "homepage": "https://github.com/toolbarthomas/totem.module.button#readme"
+    "homepage": "https://github.com/toolbarthomas/totem.module.button#readme",
+    "dependencies": {
+        "totem.template.module": "^0.1.0"
+    }
 }
