@@ -1,3 +1,13 @@
-<{{selector|default('button')}} class="button">
+<{{ selector|default('button') }} class="button{{ button_attributes.class ? ' ' ~   button_attributes.class -}}"
+{% for attribute, value in button_attributes %}
+        {% if attribute != 'class' %}
+            {% if value is same as(true) %}
+                {{- ' ' ~ attribute -}}
+            {% elseif value is not empty %}
+                {{- attribute -}}="{{- value -}}"
+            {% endif %}
+        {% endif %}
+    {% endfor -%}
+>
     {{ title }}
-</{{selector|default('button')}}>
+</{{ selector|default('button') }}>
