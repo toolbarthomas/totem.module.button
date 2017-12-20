@@ -15,8 +15,13 @@
     $property: false
 )
 {
-    @if ($category != false) and ($property != false)
-    {
-        @return get-setting($button-models, $category, $property);
+    @if ($category != false) and ($property != false) {
+
+        @if get-setting($button-models, $category, $property) {
+            @return get-setting($button-models, $category, $property);
+        } @else {
+            @return false;
+        }
+
     }
 }

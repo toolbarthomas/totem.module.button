@@ -11,7 +11,11 @@
     $type: false
 )
 {
-    @if $type != false {
-        @return map-get($button-elements, $type);
+    @if ($type != false) {
+        @if map-get($button-elements, $type) {
+            @return map-get($button-elements, $type);
+        } @else {
+            @return false;
+        }
     }
 }

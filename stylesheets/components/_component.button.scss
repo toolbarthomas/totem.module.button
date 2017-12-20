@@ -71,3 +71,21 @@
         }
     }
 }
+
+@if function-exists('extend-module') {
+    @if extend-module($button-styles) {
+        @each $list in extend-module($button-styles) {
+
+            $name: map-get($list, 'name');
+            $selector: map-get($list, 'selector');
+
+            #{$buttons} {
+                &#{$selector} {
+                    // Custom output
+                    @include button-style($name);
+                    @include button-model($name);
+                }
+            }
+        }
+    }
+}
